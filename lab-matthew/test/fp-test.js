@@ -26,9 +26,18 @@ describe('testing fp', () => {
     });
   });
   describe('testing fp.concat', () =>{
-    it('should return something', () => {
-      let result = functionName.concat(['Matthew', 'is', 'a', 'programmer'], n => n.join(''));
-      expect(result).toEqual('Matthew is a programmer');
+    it('should return [1,2,3,4,5,6,7,8,9]', () => {
+      let result = functionName.concat([1,2,3], [[4,5,6],[7,8,9]]);
+      expect(result).toEqual([1,2,3,4,5,6,7,8,9]);
+    });
+  });
+  describe('testing fp.splice', () =>{
+    it('should return 2', () =>{
+      let result = functionName.splice([1,2,3], [1, 1]);
+      expect(result).toEqual(2);
     });
   });
 });
+
+// array.splice(start, deleteCount)
+//

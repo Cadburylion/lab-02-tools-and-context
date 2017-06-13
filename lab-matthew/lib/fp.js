@@ -18,8 +18,12 @@ fp.reduce = (list, callback) => {
   return Array.prototype.reduce.call(list, callback);
 };
 
-fp.concat = (list, callback) => {
-  return Array.prototype.reduce.call(list, callback);
+fp.concat = (list, list2) => {
+  return Array.prototype.concat.apply(list, list2);
+};
+
+fp.splice = (list, args) => {
+  return Array.prototype.splice.apply(list, args);
 };
 
 // var words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
